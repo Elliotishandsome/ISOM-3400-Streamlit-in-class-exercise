@@ -55,7 +55,6 @@ st.write("Please enter the monthly sales target and select the region.")  # hint
 # Do not set a maximum (the Challenge uses a target above 50000).
 sales_target = st.number_input("Enter Monthly Sales Target(in USD):",
                       min_value=0,
-                      max_value=10000000,
                       value=50000) # hint: st.number_input("...")
 
 # Blank E: region dropdown (match the options shown in the document).
@@ -63,11 +62,11 @@ region = st.selectbox("Select Region:",
                       ["North", "West", "East", "South"])  # hint: st.selectbox("...")
 
 # Blank F: Submit button, then show the entered values and a success message (match the screenshot).
-if st.button("Click Me"):
-    st.write("Sales Target: {sales_target}"):  # hint: st.button("...")
-    st.write("Region Selected: {region}") # hint: st.write("...")  — sales target, include a $
+if st.button("Submit"):
+    st.write(f"Sales Target: {sales_target}"):  # hint: st.button("...")
+    st.write(f"Region Selected: {region}") # hint: st.write("...")  — sales target, include a $
     st.success("Dashboard updated successfully!")  # hint: st.write("...")  — region selected
-    ______  # hint: st.success("...")
+
 
     # Challenge: if the sales target is greater than 100000, show an extra message (match the screenshot).
     if sales_target > 100000:  # hint: compare sales_target with 100000
