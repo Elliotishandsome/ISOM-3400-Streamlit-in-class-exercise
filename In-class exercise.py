@@ -64,7 +64,7 @@ region = st.selectbox("Select Region:",
 
 # Blank F: Submit button, then show the entered values and a success message (match the screenshot).
 if st.button("Submit"):
-    st.write(f"Sales Target: {sales_target}"):  # hint: st.button("...")
+    st.write(f"Sales Target: {sales_target}")  # hint: st.button("...")
     st.write(f"Region Selected: {region}") # hint: st.write("...")  — sales target, include a $
     st.success("Dashboard updated successfully!")  # hint: st.write("...")  
 
